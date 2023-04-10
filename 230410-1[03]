@@ -1,0 +1,19 @@
+#include<stdio.h> 
+#include"LibConsole.h"
+
+
+void main()
+{
+	puts("숫자를 판단할 정수를 입력하세요. ");
+	printf("i: ");
+	int i = getint();
+
+	if (i <= 9)
+		printf("%d는 일의 자리 숫자 가짐\n\n", i); // 1~9를 입력시 순차적으로 이어가기 때문에 이 구문이 먼저 실행된다.
+	else if (i <= 99)
+		printf("%d는 십의 자리 숫자 가짐\n\n", i);
+	else if (i <= 999)
+		printf("%d는 백의 자리 숫자 가짐\n\n", i);
+	else
+		printf("이 숫자는 백의 자리를 초과했습니다.\n\n");
+}
