@@ -1,0 +1,37 @@
+#include<stdio.h> // #: 컴파일러에게 알려주는 기호
+#include"LibConsole.h"
+
+
+void main() // (): 함수를 정의하기 위한 괄호
+{
+	//getint(): 정수를 키보드로부터 입력받는 함수; LibConsole.h를 include에 입력
+	puts("짝수, 홀수 판단할 정수를 입력하세요. ");
+	printf("i: ");
+	int i = getint();
+	// 짝수, 홀수 판단: 나머지 연산(%)
+	//    printf("i = %d\n\n", i);  
+	int rem = i % 2; // 나머지(remainder)
+	// 짝수: 나머지 = 0
+	// 홀수: 나머지 = 1
+	printf("rem = %d\n", rem);
+	// 문법: if (판단식) {...}
+	if (rem == 0) // rem과 0이 같다(==).
+	{   // 조건이(rem == 0) 같으면 실행할 코드
+		printf("이 숫자는 0 입니다.\n");
+		printf("%d는 짝수\n\n", i);
+	}
+	/*
+	if (rem == 1) // ren과 1이 같다(==).
+	{   // 조건이(rem == 1) 같으면 실행할 코드
+		printf("이 숫자는 1입니다.\n");
+		printf("%d는 홀수\n\n", i);
+	}
+	*/
+	else //그 외의 조건: 같음의 반대(다름); rem == 1
+	{
+		printf("이 숫자는 1입니다.\n");
+		printf("%d는 홀수\n\n", i);
+	}
+	// 즉, 짝수와 홀수를 구별할 수 있는 코드가 됨.
+	// 코드 블록의 코드가 한줄(;이 하나)일 때는 {} 생략이 가능하다.
+}
